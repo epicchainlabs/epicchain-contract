@@ -1,0 +1,71 @@
+name: "NeoFS"
+safemethods: ["alphabetList", "alphabetAddress", "innerRingCandidates", "config", "listConfig", "version"]
+permissions:
+  - methods: ["update", "transfer"]
+events:
+  - name: Deposit
+    parameters:
+      - name: from
+        type: Hash160
+      - name: amount
+        type: Integer
+      - name: receiver
+        type: Hash160
+      - name: txHash
+        type: Hash256
+  - name: Withdraw
+    parameters:
+      - name: user
+        type: Hash160
+      - name: amount
+        type: Integer
+      - name: txHash
+        type: Hash256
+  - name: Cheque
+    parameters:
+      - name: id
+        type: ByteArray
+      - name: user
+        type: Hash160
+      - name: amount
+        type: Integer
+      - name: lockAccount
+        type: ByteArray
+  - name: Bind
+    parameters:
+      - name: user
+        type: ByteArray
+      - name: keys
+        type: Array
+        extendedtype:
+          base: Array
+          value:
+            base: PublicKey
+  - name: Unbind
+    parameters:
+      - name: user
+        type: ByteArray
+      - name: keys
+        type: Array
+        extendedtype:
+          base: Array
+          value:
+            base: PublicKey
+  - name: AlphabetUpdate
+    parameters:
+      - name: id
+        type: ByteArray
+      - name: alphabet
+        type: Array
+        extendedtype:
+          base: Array
+          value:
+            base: PublicKey
+  - name: SetConfig
+    parameters:
+      - name: id
+        type: ByteArray
+      - name: key
+        type: ByteArray
+      - name: value
+        type: ByteArray

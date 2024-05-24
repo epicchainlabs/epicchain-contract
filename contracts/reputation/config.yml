@@ -1,0 +1,5 @@
+name: "NeoFS Reputation"
+safemethods: ["get", "getByID", "listByEpoch"]
+permissions:
+  - methods: ["update"]
+events:

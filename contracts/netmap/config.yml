@@ -1,0 +1,23 @@
+name: "NeoFS Netmap"
+safemethods: ["innerRingList", "epoch", "netmap", "netmapCandidates", "snapshot", "snapshotByEpoch", "config", "listConfig", "version"]
+permissions:
+  - methods: ["update", "newEpoch"]
+events:
+  - name: AddPeerSuccess
+    parameters:
+      - name: publicKey
+        type: PublicKey
+  - name: UpdateStateSuccess
+    parameters:
+      - name: publicKey
+        type: PublicKey
+      - name: state
+        type: Integer
+  - name: NewEpoch
+    parameters:
+      - name: epoch
+        type: Integer
+  - name: NewEpochSubscription
+    parameters:
+      - name: contract
+        type: Hash160

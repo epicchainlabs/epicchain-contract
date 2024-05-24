@@ -1,0 +1,30 @@
+name: "NeoFS Container"
+safemethods: ["alias", "count", "containersOf", "get", "owner", "list", "eACL", "getContainerSize", "listContainerSizes", "iterateContainerSizes", "iterateAllContainerSizes", "version"]
+permissions:
+  - methods: ["update", "addKey", "transferX",
+              "register", "registerTLD", "addRecord", "deleteRecords", "subscribeForNewEpoch"]
+events:
+  - name: PutSuccess
+    parameters:
+      - name: containerID
+        type: Hash256
+      - name: publicKey
+        type: PublicKey
+  - name: DeleteSuccess
+    parameters:
+      - name: containerID
+        type: ByteArray
+  - name: SetEACLSuccess
+    parameters:
+      - name: containerID
+        type: ByteArray
+      - name: publicKey
+        type: PublicKey
+  - name: StartEstimation
+    parameters:
+      - name: epoch
+        type: Integer
+  - name: StopEstimation
+    parameters:
+      - name: epoch
+        type: Integer

@@ -1,0 +1,79 @@
+name: Go
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v4
+        with:
+          version: latest
+          args: --config=.github/workflows/config/.golangci.yml
+
+  tests:
+    name: Tests
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        go: [ '1.20', '1.21', '1.22' ]
+        os: [ubuntu-latest, windows-2022, macos-14]
+        exclude:
+          # Only latest Go version for Windows and MacOS.
+          - os: windows-2022
+            go: '1.20'
+          - os: windows-2022
+            go: '1.21'
+          - os: macos-14
+            go: '1.20'
+          - os: macos-14
+            go: '1.21'
+      fail-fast: false
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '${{ matrix.go }}'
+
+    - name: Test
+      run: go test -v ./...
+
+  build:
+    name: Build contracts and RPC bindings
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go_versions: [ '1.20', '1.21', '1.22' ]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '${{ matrix.go_versions }}'
+
+      - name: Clear built RPC bindings
+        run: make clean
+
+      - name: Compile contracts and build RPC bindings
+        run: make build
+
+      - name: Check that committed RPC bindings match generated ones
+        run: |
+          if [[ $(git diff --name-only | grep '^rpc/*' -c) != 0 ]]; then
+          echo "Fresh version of RPC bindings should be committed for the following contracts:";
+          git diff --name-only;
+          exit 1;
+          fi
