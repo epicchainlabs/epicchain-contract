@@ -2,7 +2,7 @@
 
 # Overview
 
-EpicChain-Contract contains all EpicChain related contracts written for the [EpicChain-Go](https://github.com/nspcc-dev/epicchain-go) compiler. These contracts are deployed both on the mainchain and the sidechain.
+EpicChain-Contract contains all EpicChain related contracts written for the [EpicChain-Go](https://github.com/epicchainlabs/epicchain-go) compiler. These contracts are deployed both on the mainchain and the sidechain.
 
 **Mainchain contracts:**
 
@@ -61,7 +61,7 @@ Smart contract tests reside in the `tests/` directory. To execute the test suite
 
 ```bash
 $ make test
-ok      github.com/nspcc-dev/epicchain-contract/tests       0.462s
+ok      github.com/epicchainlabs/epicchain-contract/tests       0.462s
 ```
 
 # License
