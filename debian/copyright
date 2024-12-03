@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: neofs-contract
 Upstream-Contact: tech@nspcc.ru
-Source: https://github.com/nspcc-dev/neofs-contract
+Source: https://github.com/epicchainlabs/epicchain-contract
 
 Files: *
 Copyright: 2018-2022 NeoSPCC (@nspcc-dev)

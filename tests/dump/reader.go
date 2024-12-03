@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/nspcc-dev/neo-go/pkg/core/state"
+	"github.com/epicchainlabs/epicchain-go/pkg/core/state"
 )
 
 // IterateDumps iterates over all contracts collected by the Creator model in

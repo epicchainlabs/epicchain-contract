@@ -7,15 +7,15 @@ import (
 	"path"
 	"testing"
 
+	"github.com/epicchainlabs/epicchain-contract/common"
+	"github.com/epicchainlabs/epicchain-contract/contracts/container"
+	"github.com/epicchainlabs/epicchain-contract/contracts/nns"
+	"github.com/epicchainlabs/epicchain-go/pkg/core/interop/storage"
+	"github.com/epicchainlabs/epicchain-go/pkg/encoding/address"
+	"github.com/epicchainlabs/epicchain-go/pkg/neotest"
+	"github.com/epicchainlabs/epicchain-go/pkg/util"
+	"github.com/epicchainlabs/epicchain-go/pkg/vm/stackitem"
 	"github.com/mr-tron/base58"
-	"github.com/nspcc-dev/neo-go/pkg/core/interop/storage"
-	"github.com/nspcc-dev/neo-go/pkg/encoding/address"
-	"github.com/nspcc-dev/neo-go/pkg/neotest"
-	"github.com/nspcc-dev/neo-go/pkg/util"
-	"github.com/nspcc-dev/neo-go/pkg/vm/stackitem"
-	"github.com/nspcc-dev/neofs-contract/common"
-	"github.com/nspcc-dev/neofs-contract/contracts/container"
-	"github.com/nspcc-dev/neofs-contract/contracts/nns"
 	"github.com/stretchr/testify/require"
 )
 

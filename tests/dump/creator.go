@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/nspcc-dev/neo-go/pkg/core/state"
+	"github.com/epicchainlabs/epicchain-go/pkg/core/state"
 )
 
 // Creator dumps states of the Neo smart contracts. Output file format:

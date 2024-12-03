@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/nspcc-dev/neo-go/pkg/interop/contract"
-	"github.com/nspcc-dev/neo-go/pkg/interop/runtime"
+	"github.com/epicchainlabs/epicchain-go/pkg/interop/contract"
+	"github.com/epicchainlabs/epicchain-go/pkg/interop/runtime"
 )
 
 // SubscribeForNewEpoch registers calling contract as a NewEpoch

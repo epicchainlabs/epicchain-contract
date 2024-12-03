@@ -1,11 +1,11 @@
 package common
 
 import (
-	"github.com/nspcc-dev/neo-go/pkg/interop"
-	"github.com/nspcc-dev/neo-go/pkg/interop/contract"
-	"github.com/nspcc-dev/neo-go/pkg/interop/lib/address"
-	"github.com/nspcc-dev/neo-go/pkg/interop/native/management"
-	"github.com/nspcc-dev/neo-go/pkg/interop/native/std"
+	"github.com/epicchainlabs/epicchain-go/pkg/interop"
+	"github.com/epicchainlabs/epicchain-go/pkg/interop/contract"
+	"github.com/epicchainlabs/epicchain-go/pkg/interop/lib/address"
+	"github.com/epicchainlabs/epicchain-go/pkg/interop/native/management"
+	"github.com/epicchainlabs/epicchain-go/pkg/interop/native/std"
 )
 
 // NNSID is the ID of the NNS contract in NeoFS networks. It's always deployed

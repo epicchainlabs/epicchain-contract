@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/nspcc-dev/neofs-contract/tests/dump"
+	"github.com/epicchainlabs/epicchain-contract/tests/dump"
 )
 
 func main() {

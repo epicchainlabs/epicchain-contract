@@ -1,12 +1,12 @@
-module github.com/nspcc-dev/neofs-contract
+module github.com/epicchainlabs/epicchain-contract
 
 go 1.20
 
 require (
 	github.com/google/uuid v1.6.0
 	github.com/mr-tron/base58 v1.2.0
-	github.com/nspcc-dev/neo-go v0.106.0
-	github.com/nspcc-dev/neo-go/pkg/interop v0.0.0-20240521124852-5cbfe215a4e9
+	github.com/epicchainlabs/epicchain-go v0.106.0
+	github.com/epicchainlabs/epicchain-go/pkg/interop v0.0.0-20240521124852-5cbfe215a4e9
 	github.com/stretchr/testify v1.9.0
 	go.uber.org/zap v1.27.0
 )

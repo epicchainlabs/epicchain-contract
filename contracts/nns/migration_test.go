@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/nspcc-dev/neo-go/pkg/vm/stackitem"
-	"github.com/nspcc-dev/neofs-contract/tests/dump"
-	"github.com/nspcc-dev/neofs-contract/tests/migration"
+	"github.com/epicchainlabs/epicchain-contract/tests/dump"
+	"github.com/epicchainlabs/epicchain-contract/tests/migration"
+	"github.com/epicchainlabs/epicchain-go/pkg/vm/stackitem"
 	"github.com/stretchr/testify/require"
 )
 

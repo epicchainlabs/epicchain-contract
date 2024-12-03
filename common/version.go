@@ -1,6 +1,6 @@
 package common
 
-import "github.com/nspcc-dev/neo-go/pkg/interop/native/std"
+import "github.com/epicchainlabs/epicchain-go/pkg/interop/native/std"
 
 const (
 	major = 0

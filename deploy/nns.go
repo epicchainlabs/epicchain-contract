@@ -7,19 +7,19 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/nspcc-dev/neo-go/pkg/crypto/keys"
-	"github.com/nspcc-dev/neo-go/pkg/neorpc"
-	"github.com/nspcc-dev/neo-go/pkg/rpcclient/actor"
-	"github.com/nspcc-dev/neo-go/pkg/rpcclient/invoker"
-	"github.com/nspcc-dev/neo-go/pkg/rpcclient/management"
-	"github.com/nspcc-dev/neo-go/pkg/rpcclient/nns"
-	"github.com/nspcc-dev/neo-go/pkg/rpcclient/notary"
-	"github.com/nspcc-dev/neo-go/pkg/rpcclient/unwrap"
-	"github.com/nspcc-dev/neo-go/pkg/smartcontract/manifest"
-	"github.com/nspcc-dev/neo-go/pkg/smartcontract/nef"
-	"github.com/nspcc-dev/neo-go/pkg/util"
-	"github.com/nspcc-dev/neo-go/pkg/vm/stackitem"
-	"github.com/nspcc-dev/neo-go/pkg/wallet"
+	"github.com/epicchainlabs/epicchain-go/pkg/crypto/keys"
+	"github.com/epicchainlabs/epicchain-go/pkg/neorpc"
+	"github.com/epicchainlabs/epicchain-go/pkg/rpcclient/actor"
+	"github.com/epicchainlabs/epicchain-go/pkg/rpcclient/invoker"
+	"github.com/epicchainlabs/epicchain-go/pkg/rpcclient/management"
+	"github.com/epicchainlabs/epicchain-go/pkg/rpcclient/nns"
+	"github.com/epicchainlabs/epicchain-go/pkg/rpcclient/notary"
+	"github.com/epicchainlabs/epicchain-go/pkg/rpcclient/unwrap"
+	"github.com/epicchainlabs/epicchain-go/pkg/smartcontract/manifest"
+	"github.com/epicchainlabs/epicchain-go/pkg/smartcontract/nef"
+	"github.com/epicchainlabs/epicchain-go/pkg/util"
+	"github.com/epicchainlabs/epicchain-go/pkg/vm/stackitem"
+	"github.com/epicchainlabs/epicchain-go/pkg/wallet"
 	"go.uber.org/zap"
 )
 
@@ -132,7 +132,7 @@ func initNNSContract(ctx context.Context, prm deployNNSContractPrm) (res util.Ui
 		}
 
 		if stateOnChain != nil {
-			// declared in https://github.com/nspcc-dev/neofs-contract sources
+			// declared in https://github.com/epicchainlabs/epicchain-contract sources
 			const nnsContractName = "NameService"
 			if stateOnChain.Manifest.Name != nnsContractName {
 				return res, fmt.Errorf("wrong name of the contract with ID=1: expected '%s', got '%s'",

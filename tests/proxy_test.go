@@ -4,8 +4,8 @@ import (
 	"path"
 	"testing"
 
-	"github.com/nspcc-dev/neo-go/pkg/neotest"
-	"github.com/nspcc-dev/neo-go/pkg/util"
+	"github.com/epicchainlabs/epicchain-go/pkg/neotest"
+	"github.com/epicchainlabs/epicchain-go/pkg/util"
 )
 
 const proxyPath = "../contracts/proxy"

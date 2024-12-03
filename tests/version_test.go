@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/nspcc-dev/neofs-contract/common"
+	"github.com/epicchainlabs/epicchain-contract/common"
 	"github.com/stretchr/testify/require"
 )
 

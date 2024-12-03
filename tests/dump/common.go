@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/nspcc-dev/neo-go/pkg/core/state"
+	"github.com/epicchainlabs/epicchain-go/pkg/core/state"
 )
 
 // ID is a unique identifier of the dump prepared according to the model

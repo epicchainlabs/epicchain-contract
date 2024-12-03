@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/nspcc-dev/neo-go/pkg/interop/native/std"
-	"github.com/nspcc-dev/neo-go/pkg/interop/storage"
+	"github.com/epicchainlabs/epicchain-go/pkg/interop/native/std"
+	"github.com/epicchainlabs/epicchain-go/pkg/interop/storage"
 )
 
 func GetList(ctx storage.Context, key any) [][]byte {

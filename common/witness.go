@@ -1,6 +1,6 @@
 package common
 
-import "github.com/nspcc-dev/neo-go/pkg/interop/runtime"
+import "github.com/epicchainlabs/epicchain-go/pkg/interop/runtime"
 
 var (
 	// ErrAlphabetWitnessFailed appears when the method must be
